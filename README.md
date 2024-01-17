@@ -7,12 +7,12 @@ This script provides a simple integration between OBS Studio and Twitter, allowi
 ## Prerequisites
 
 - OBS Studio installed with the `obspython` module.
-- Python environment set up with the `tweepy` library installed.
+- Python 3.11.4 environment set up with the `tweepy` library installed.
 - Valid Twitter API credentials (Consumer Key, Consumer Secret, Access Token, and Access Token Secret).
 
 ## Installation
 
-1. Ensure that OBS Studio and Python are correctly installed on your system.
+1. Ensure that OBS Studio and Python 3.11.4 are correctly installed on your system.
 2. Install the `tweepy` library using pip:
 
 ```
