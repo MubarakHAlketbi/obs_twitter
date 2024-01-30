@@ -1,5 +1,6 @@
 import obspython as obs
 import tweepy
+import time
 
 # Twitter API credentials (replace with your own)
 client = tweepy.Client(
@@ -17,10 +18,12 @@ def tweet(message):
         obs.script_log(obs.LOG_WARNING, f"Error tweeting: {e}")
 
 def start_streaming():
-    tweet("I have started streaming!\nCome and watch.")
+    unix_time = int(time.time())
+    tweet(f"I have started streaming!\nCome and watch.\n{unix_time}")
 
 def stop_streaming():
-    tweet("I have stopped streaming.\nThanks for watching!")
+    unix_time = int(time.time())
+    tweet(f"I have stopped streaming.\nThanks for watching!\n{unix_time}")
 
 def on_event(event):
     if event == obs.OBS_FRONTEND_EVENT_STREAMING_STARTED:
